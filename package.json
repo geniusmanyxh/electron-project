@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm -F electron-one dev",
+    "build": "pnpm -F electron-one build",
+    "test": "ts-node test.ts"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -12,6 +19,8 @@
   "devDependencies": {
     "@types/node": "^20.11.16",
     "electron": "^28.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2",
     "vite": "^5.0.12",
     "vue": "^3.4.15"
   }
